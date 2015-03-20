@@ -35,4 +35,39 @@ print 	"Route Summarization\n"\
 	"Subnetting: Process of lengthening the mask to create multiple smaller subnets from a single large network.\n"\
 	"Route Summarization == DEFINITION = The Shortening of the mask to include several smaller networks into one larger network address.\n"\
 	"As network grows, IP Route Tables become too large for routers to handle efficiently. Slower from congestion, packet drops, crashes.\n"\
+	"Central Hub can send routing updates with all subnetsit knows about listed individually or via route summarization, it can send a single line.\n"\
+	"Single Line contains 'send anything that starts w/ 192.168.0 to me'\n"\
+	"Although both work, scalability is the issue at hand.\n"\
+	"Route Summarization takes a set of contiguous networks/subnets and groups them together using a shorter subnet mask.\n"\
+	"Advantages: \n1.) Reduces number of route table entries. \n2.)Reduces Router Load/Network Overhead : and \n3.)Hides System Instability behind Summary\n"\
+	"Contiguous: 0, 16, 32, 48 // 192, 208, 224, 240 // both sets are contiguous with one within each other, but not with each sets other.\n"\
+	"Summarization Guidelines:\n"\
+	"1.) Design Networks w/ Summarization in mind. Group Contiguous Subnets together behind a router that will summarize them.\n"\
+	"2.) Summarize into the core of your network. Bigger, Faster, Busier Routers. Deals w/ high volume traffic that is meant for all other networks.\n    Do not burden w/ big route tables\n"\
+	"3.) Further from the core means the more detailed the routers will be with routing tables for directing traffic to proper destinations.\n"\
 	"\n"\
+	"Determining Summary Addresses\n"\
+	"-----------------------------\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+
+
+
+
+
+
