@@ -59,15 +59,28 @@ print 	"Route Summarization\n"\
 	"Where the summarization begins. Arrange int oct in binary form and find the common bits.\n"\
 	"Draw the line between the common bits and the ranging bits. Everything to the left must be static, everything to the right can be dynamic.\n"\
 	"Summarize by building a subnet mask that puts a 1 under all the common bits in the range and a 0 under everything else. {1L||0R} \n"\
+	"Summary = IP Address + Subnet Mask\n"\
+	"First Network ID = IP Address\n"\
+	"Subnet Mask = Determined by the Boundary Line {1L||0R}\n"\
+	"1.) 192.168.1.0/26 192.168.1.128/26\n"\
+	"2.) B E F\n"\
+	"\n"\
+	"IPv6\n"\
+	"----\n"\
 	"\n"\
 	"\n"\
 	"\n"\
 	"\n"\
 	"\n"\
 	"\n"\
-
-
-
-
-
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
 
