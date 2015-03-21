@@ -48,17 +48,17 @@ print 	"Route Summarization\n"\
 	"\n"\
 	"Determining Summary Addresses\n"\
 	"-----------------------------\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
+	"Create Summary Addresses == Routing Protocols for Classless Configurations = Manual Process\n"\
+	"Create Summary Addresses == Routing Protocols for Classful Configurations  = Auto   Process\n"\
+	"For Classful Configs:\n"\
+	"Treats any subnet as the classful address. But not that simple.\n"\
+	"Summarization is the complete opposite of Subnetting == Supernetting.\n"\
+	"Subnet   == lengthen mask by 1 bit = double the network\n"\
+	"Supernet == Retract  mask by 1 bit = combine networks into groups that follow the binary increment numbers.\n"\
+	"Interesting Octet: The octet in which the range of networks occur.\n"\
+	"Where the summarization begins. Arrange int oct in binary form and find the common bits.\n"\
+	"Draw the line between the common bits and the ranging bits. Everything to the left must be static, everything to the right can be dynamic.\n"\
+	"Summarize by building a subnet mask that puts a 1 under all the common bits in the range and a 0 under everything else. {1L||0R} \n"\
 	"\n"\
 	"\n"\
 	"\n"\
