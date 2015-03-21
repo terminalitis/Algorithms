@@ -67,6 +67,89 @@ print 	"Route Summarization\n"\
 	"\n"\
 	"IPv6\n"\
 	"----\n"\
+	"1.] Which are valid IPv6 addresses?\n"\
+	"[A, B, C, D, E]\n"\
+	"Global Unicast, Unique Local, Link Local, Multicast, Anycast\n"\
+	"IPv6 does not broadcast\n"\
+	"2.] Valid IPv6 addresses?\n"\
+	"All\n"\
+	"2001 : 0db8 : 0000 : 0000 : ff00 : 0042 : 8329\n"\
+	"2001 : db8 : 0 : 0 : 0 : ff00 : 42 : 8329\n"\
+	"2001 : db8 : ff00 : 42 : 8329\n"\
+	"0000 : 0000 : 0000 : 0000 : 0000 : 0000 : 0000 : 0001\n"\
+	"::1\n"\
+	"::192:168:1:1\n"\
+	"3.] Valid IOS Command to apply IPv6 address to router interface?\n"\
+	"interface fastethernet 1/0 ipv6 address 2001:AB00:00FF:1::/64 eui-64\n"\
+	"IPv6 Addresses are 128 bit strings, allowing 3.4 x 10^38 possibilities.\n"\
+	"IPv6 Address Allocation\n"\
+	"-----------------------\n"\
+	"ICANN [Internet Corporation for Assigned Network Numbers] are responsible for dividing up the IPv6 address space.\n"\
+	"They do so w/ a better understanding of global demand and the luxury of an obscene amount of quantity to allocate.\n"\
+	"1.] In order for an efficient Internet to work well, route summarization so that route tables arent oversized + slow.\n"\
+	"2.] Route Summarization works best when every router is responsible for its branch.\n"\
+	"3.] As smaller branches get closer to the core, the larger/more capable the router is {hardware-wise}.\n"\
+	"4.] Allows a single router to advertise a summary for the yggdrasil.\n"\
+	"5.] Ex. Major ISP branches out to smaller/enterprise ISPs.\n"\
+	"6.] This way despite many changes beyond the core, the core remains intact/preserved.\n"\
+	"\n"\
+	"IPv6 Address Notation\n"\
+	"---------------------\n"\
+	"In binary, 4x longer than IPv4 addr;\n"\
+	"Instead of dotted-decimals in four octets;IPv6 == hexadecimal [8 sets:4 chars] seperated by colons.\n"\
+	"2201:0FA0:080B:2112:0000:0000:0000:0001\n"\
+	"Each char == 4 bits\n"\
+	"Several Truncation Methods to shorten address.\n"\
+	"1.] Allowed to drop all LEADING 0's [zeroes]\n"\
+	"2201:FA0:80B:2112:0:0:0:1\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
 	"\n"\
 	"\n"\
 	"\n"\
