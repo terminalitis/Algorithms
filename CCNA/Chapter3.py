@@ -133,24 +133,24 @@ print 	"Route Summarization\n"\
 	"Host --> Wants Address --> Learns what the /64 network prefix is on the local link --> appends MAC address[EUI-64]\n	 ==> generates 128-bit IPv6 address unique to Host.\n"\
 	"EUI-64 Format --> 48-bit MAC Address + special pattern [FFFE] --> after first 24 bits (the six OUI chars) --> followed by the remaining 6 hex chars in the host MAC.\n"\
 	"IPv6 Rule: 7th Bit in EUI-64 Address MUST BE 1. This is the marker that ensures modification of burned-in MAC address.\n"\
+	"EUI-64 Address == </64 net_prefix>:[MAC+{7TH BIT == 1}]\n"\
+	"1.] STATIC CONFIGURATION --> Admin assigns static IPv6 addresses to the hosts' NICs. ==> Admin's Responsibility to choose an address that will function + be valid in the hosts' network.\n"\
+	"2.] STATIC CONFIGURATION w/ EUI-64 --> Admin manually configures the address w/ local /64 net_prefix + host's MAC[EUI-64] \n"\
+	"3.] DYNAMIC CONFIGURATION w/ DHCP to ASSIGN 128-BIT ADDRESS --> Host is set to obtain its Address from DHCP ==> DHCP Server is setup to handout IPv6 addresses from a scope.\n"\
+	"4.] DYNAMIC CONFIGURATION w/ STATELESS AUTOCONFIG w/ EUI-64 --> Host obtains address automatically --> DHCP server ( 1 or 0 ) ==> if 1, only informs host of the /64 local net-prefix.\n"\
 	"\n"\
+	"IPv6 Router Configuration\n"\
+	"-------------------------\n"\
+	"ios cmd=> interface fastethernet 1/0\n"\
+	"ios cmd=> ipv6 address 2001:AB00:00FF:1::/64 eui-64\n"\
+	"'eui-64' switch ==> tells router to figure out its own EUI-64 address to follow the /64 prefix provided. w/o it, you need to provide a full 128-bit address... \n"\
+	"ios cmd=> show ipv6 interface || 'cmd to verify router config'\n"\
 	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
+	"IPv6 Features\n"\
+	"-------------\n"\
+	"IPsec: Support is built-in [IPv6]. If configured, every packet sent/recv can be protected by IPsec transport for IPv6 hosts.\n"\
+	"Mobility: Built-in, but not mandatory as some hosts will not be mobile.\n"\
+	"Fixed header size: IPv6 header is fixed @ 40 bytes or 320 bits.\n"\
 	"\n"\
 	"\n"\
 	"\n"\
