@@ -151,6 +151,21 @@ print 	"Route Summarization\n"\
 	"IPsec: Support is built-in [IPv6]. If configured, every packet sent/recv can be protected by IPsec transport for IPv6 hosts.\n"\
 	"Mobility: Built-in, but not mandatory as some hosts will not be mobile.\n"\
 	"Fixed header size: IPv6 header is fixed @ 40 bytes or 320 bits.\n"\
+	"ICMP IPv6 w/ new functionality: path MTU [PMTU] discovery == host sends ICMP msg to determine smallest maximum transmission unit [MTU] on any link b/w sender + dest.\n"\
+	"Host then sends packets that is the MTU value. This reduces stress on the router by having it not fragment/reassemble packets over a small-MTU link.\n"\
+	"RFC 1981 ==> hosts not using PMTU will transmit packets @ the minimum IPv6 link MTU, which is very small + inefficient.\n"\
+	"IPv6 + extensive use of Router Solicitation [RS] + Router Advertisement [RA] messages ==> multicast msgs to addresses FF02::1 + FF00::2, respectively.\n"\
+	"[RS] FF02::1, RS is sent from host to all routers via multicast.\n"\
+	"[RA] FF00::2, RA is sent from router to all hosts via multicast.\n"\
+	"This allows the hosts to learn whether DHCP is supported on link and possibly the DHCP Server address.\n"\
+	"\n"\
+	"The IPv6 Header\n"\
+	"---------------\n"\
+	"Header is fixed at 40 bytes * 8 bits per byte = 320 Bits\n"\
+	"From Top -> Bottom:\n"\
+	"[Version:4 BITS][Traffic Class:8 BITS][Flow Label : 20  BITS ]\n"\
+	"[Payload Length:16 BITS][Next Header:8 BITS][Hop Limit:8 BITS]\n"\
+	"[			Source Address: 128 BITS	      ]\n"\
 	"\n"\
 	"\n"\
 	"\n"\
@@ -166,4 +181,72 @@ print 	"Route Summarization\n"\
 	"\n"\
 	"\n"\
 	"\n"\
-
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
+	"\n"\
