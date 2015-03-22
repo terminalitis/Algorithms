@@ -131,8 +131,8 @@ print 	"Route Summarization\n"\
 	"IPv6 Dynamic Addressing = Stateless Autoconfiguration\n"\
 	"Feature allows a host to choose + configure an address for itself.\n"\
 	"Host --> Wants Address --> Learns what the /64 network prefix is on the local link --> appends MAC address[EUI-64]\n	 ==> generates 128-bit IPv6 address unique to Host.\n"\
-	"\n"\
-	"\n"\
+	"EUI-64 Format --> 48-bit MAC Address + special pattern [FFFE] --> after first 24 bits (the six OUI chars) --> followed by the remaining 6 hex chars in the host MAC.\n"\
+	"IPv6 Rule: 7th Bit in EUI-64 Address MUST BE 1. This is the marker that ensures modification of burned-in MAC address.\n"\
 	"\n"\
 	"\n"\
 	"\n"\
