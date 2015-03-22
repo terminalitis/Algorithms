@@ -165,34 +165,34 @@ print 	"Route Summarization\n"\
 	"From Top -> Bottom:\n"\
 	"[Version:4 BITS][Traffic Class:8 BITS][Flow Label : 20  BITS ]\n"\
 	"[Payload Length:16 BITS][Next Header:8 BITS][Hop Limit:8 BITS]\n"\
-	"[			Source Address: 128 BITS	      ]\n"\
+	"[                   Source Address: 128 BITS                 ]\n"\
+	"[                Destination Address: 128 BITS               ]\n"\
 	"\n"\
+	"[1]Version        : 4   Bits\n"\
+	"[1]Traffic Class  : 8   Bits\n"\
+	"[1]Flow Label     : 20  Bits\n"\
+	"[2]Payload Length : 16  Bits\n"\
+	"[2]Next Header    : 8   Bits\n"\
+	"[2]Hop Limit      : 8   Bits\n"\
+	"[3]Source Address : 128 Bits\n"\
+	"[4]Destn. Address : 128 Bits\n"\
 	"\n"\
+	"[1]Version        : Identifies IPversion[x]; x==4 or 6\n"\
+	"[1]Traffic Class  : [QoS]Quality of Service Layer 3 Marking; Higher value ==> Higher Priority the Packet. Router can be config to read value+send high pri packet 1st during congestion. VOIP\n"\
+	"[1]Flow Label     : Number identifies packet as one of a flow in a stream from sender to receiver. good ex for VOIP. good for voip if all packets sent in exact order\n"\
+	"[2]Payload Length : Indicates Payload and is very important b/c there is no header checksum.\n"\
+	"[2]Next Header    : same as Options in IPv4. Short code for ext header are listed here. add info is appended in add headers after primary IPv6 header. speeds up ipv6 packet routing[fast switch]\n"\
+	"[2]Hop Limit      : IPv4 = 255 Hops... IPv6 more intuitive == Hop Limit is set to actual amount to reach its intended destination. As passed thru router, hop value decremented by 1.\n"\
 	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
+	"IPv6 Transition Strategies\n"\
+	"--------------------------\n"\
+	"Easiest IPv6 Transition Choice:\n"\
+	"DUAL STACK : Host[router,pc,printer] runs both IPv4 + IPv6 protocol stacks // send/receive both packet types on the same interface.\n"\
+	"           : Drawback: additional load on host.\n"\
+	"TUNNELING  : Create a tunnel for one protocol thru another. IPv6 packet == encapsulate it into an IPv4 packet to transition across the provider network and decapsulate once it reaches the dest.\n"\
+	"           : Known as '6-to-4 Tunnel' auto or manual. special address range of 2002::/16\n"\
+	"           : Teredo Tunneling:: Encapsulates IPv6 packets in IPv4 UDP datagrams for routing thru IPv4 networks. Chief benefit is that is can operate beyond NAT devices. A LAST RESORT.\n"\
+	"           : ISATAP[Intra-Site Automatic Tunnel Addressing Protocol] uses IPv4 net as a virtual NBMA data link layer. derived dyn from IPv4 addresses\n"\
 	"\n"\
 	"\n"\
 	"\n"\
