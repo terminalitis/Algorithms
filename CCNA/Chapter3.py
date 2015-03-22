@@ -102,35 +102,35 @@ print 	"Route Summarization\n"\
 	"Several Truncation Methods to shorten address.\n"\
 	"1.] Allowed to drop all LEADING 0's [zeroes]\n"\
 	"2201:FA0:80B:2112:0:0:0:1\n"\
+	"2.] Truncation Method: Condense contiguous groups of all-0 sets by representing them w/ '::'.\n"\
+	"2201:FA0:80B:2112::1\n"\
+	"3.] Only allowed to use the '::' condensation once per address.\n"\
+	"Mask is not represented in hexadecimal characters || Identify the prefix length w/ slash notation.\n"\
+	"Slash Notation == Identifies how many bits in network part.\n"\
 	"\n"\
+	"Types of IPv6 Addresses\n"\
+	"-----------------------\n"\
+	"Unicast: IPv6 == IPv4 // an IP assigned to a host interface. Source IP Packet or Destination IP Packets. Packet sent to unicast address goes to one host.\n"\
+	"Global Unicast: Public, Registered IP Address. Internet routable, globally registered IPs that must be leased from an ISP.\n"\
+	"Unique Local: EQV == IPv4 private address. Not registered w/ ISP nor Internet Routable.\n"\
+	"Link Local: Every IPv6 interface gives itself a link-local address. Range is FE80::/10 Prefix + last 64-bits in EUI-64 Format.\n"\
+	"	     Roughly equivalent to the Automatic Private IP Address [APIPA] range of 169.254.0.0/16\n"\
+	"Multicast:  A Single IPv6 multicast address to multiple hosts so that a packet sent to the address may be delivered to all associated hosts at the same time.\n"\
+	"	     IPv6 Multicast Addresses all start w/ the prefix FF00::/8\n"\
+	"Anycast:    A single address that is assigned to multiple hosts. Similar to a multicast address, but that a packet sent via anycast will be delivered to the closest host. No special prefix\n"\
+	"Broadcast:  Does not exist. [N/A]\n"\
+	"**KNOW THE IPv6 ADDRESS TYPES**\n"\
 	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
+	"IPv6 Address Configuration\n"\
+	"--------------------------\n"\
+	"IPv6 protocol stack must be installed.\nMust upgrade router IOS to provide IPv6 support.\nAddress Assignment = [1-4 Options]"\
+	"Concepts of Stateful vs. Stateless Configuration + EUI-64 address format.\n"\
+	"IPv6: Can use DHCP to assign IP Addresses just like in IPv4. Admin must setup server w/ IPv6 scope to hand out addresses.\n"\
+	"Minor diff when discovering + assigning, but net result [IPv4 vs IPv6] is the same.\n"\
+	"Stateful Addressing: DHCP server keeps track of IPv6 addresses + associated hosts. {State of the Host[DHCP]}\n"\
+	"IPv6 Dynamic Addressing = Stateless Autoconfiguration\n"\
+	"Feature allows a host to choose + configure an address for itself.\n"\
+	"Host --> Wants Address --> Learns what the /64 network prefix is on the local link --> appends MAC address[EUI-64]\n	 ==> generates 128-bit IPv6 address unique to Host.\n"\
 	"\n"\
 	"\n"\
 	"\n"\
