@@ -1,4 +1,4 @@
-print	"VLSM = Variable Length Subnet Masking\n"\
+print	("VLSM = Variable Length Subnet Masking\n"\
 	"----\n"\
 	"VLSM is important to modern IP networks because it allows us to identify each subnet by its mask number.\n"\
 	"A routing protocol must be able to *advertise the mask for each subnet in the routing update* to support VLSM.\n"\
@@ -24,9 +24,9 @@ print	"VLSM = Variable Length Subnet Masking\n"\
 	"Efficient Addressing: Making networks the right size without depleting the limited address space / limiting future growth.\n"\
 	"False: It is impossible to subnet a subnet.\n"\
 	"How does VLSM make IP Addressing more efficient?\n"\
-	"D: By allowing a routed system to include subnets of different mask lengths to suit requirements.\n"\
+	"D: By allowing a routed system to include subnets of different mask lengths to suit requirements.\n")
 
-print 	"Route Summarization\n"\
+print 	("Route Summarization\n"\
 	"-------------------\n"\
 	"Summary for the following range of subnets: 172.20.32.0/24 to 172.20.47.0/24\n"\
 	"Ans: 172.20.32.0/20 or 172.20.32.0 255.255.240.0\n"\
@@ -192,61 +192,4 @@ print 	"Route Summarization\n"\
 	"TUNNELING  : Create a tunnel for one protocol thru another. IPv6 packet == encapsulate it into an IPv4 packet to transition across the provider network and decapsulate once it reaches the dest.\n"\
 	"           : Known as '6-to-4 Tunnel' auto or manual. special address range of 2002::/16\n"\
 	"           : Teredo Tunneling:: Encapsulates IPv6 packets in IPv4 UDP datagrams for routing thru IPv4 networks. Chief benefit is that is can operate beyond NAT devices. A LAST RESORT.\n"\
-	"           : ISATAP[Intra-Site Automatic Tunnel Addressing Protocol] uses IPv4 net as a virtual NBMA data link layer. derived dyn from IPv4 addresses\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
-	"\n"\
+	"           : ISATAP[Intra-Site Automatic Tunnel Addressing Protocol] uses IPv4 net as a virtual NBMA data link layer. derived dyn from IPv4 addresses\n")
