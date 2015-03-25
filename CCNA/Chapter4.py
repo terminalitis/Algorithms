@@ -47,3 +47,14 @@ print	("IOS Startup Process\n"\
 	 "4.] Find Config\n"\
 	 "5.] Load config to RAM\n"\
 	)
+
+print	("Password Recovery\n"\
+	 "-----------------\n"\
+	 "0x2142 = skip startup config in NVRAM\n"\
+	 "skips password that is stored in startup config\n"\
+	 "Connect to console port, start Terminal, power Cycle Router\n"\
+	 "when boot begins, hit the Break sequence.\n"\
+	 "Ctrl+break, depends on terminal app\n"\
+	 
+
+
